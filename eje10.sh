@@ -1,4 +1,7 @@
 #! /bin/bash
 #Imprima la RAM de su máquina
-Capacidad=$(sudo dmidecode --type memory | grep 'Maximum Capacity')
-echo ("Capacidad máxima de la RAM: $Capacidad")
+#Memoria=$(sudo dmidecode --type memory)
+#Capacidad=$($Memoria | grep 'Maximum Capacity')
+#echo ("Capacidad máxima de la RAM:" $(sudo dmidecode --type memory))
+echo "Capacidad máxima de la RAM:"
+sudo dmidecode --type memory| grep 'Maximum Capacity'
