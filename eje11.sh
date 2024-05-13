@@ -3,4 +3,4 @@
 #El archivo debe contenener, en cada fila, primero la hora, y separado por un espacio, el tráfico recibido.
 #Luego, debe procesar ese archivo para graficar el tráfico de red.
 
-less /sys/class/net/enp2s2/statistics/rx_bytes
+less /sys/class/net/enp2s0/statistics/rx_bytes
