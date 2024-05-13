@@ -5,3 +5,5 @@
 
 #less /sys/class/net/enp2s0/statistics/rx_bytes
 cat /sys/class/net/enp2s0/statistics/rx_bytes
+mkdir /tmp/datos
+tempfile --directory /tmp/datos
