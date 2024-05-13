@@ -11,4 +11,5 @@ bytes=$(cat /sys/class/net/enp2s0/statistics/rx_bytes)
 #mktemp --directory /tmp/datos \--name rx_bytes 
 TempFile=$(mktemp -p /tmp/datos)
 
-echo $bytes << $TempFile
+echo $bytes >> $TempFile
+echo $TempFile
