@@ -5,7 +5,10 @@
 
 #less /sys/class/net/enp2s0/statistics/rx_bytes
 cat /sys/class/net/enp2s0/statistics/rx_bytes
+bytes=$(cat /sys/class/net/enp2s0/statistics/rx_bytes)
+
 #touch --directory /tmp/datos --name rx_bytes
 #mktemp --directory /tmp/datos \--name rx_bytes 
 TempFile=$(mktemp -p /tmp/datos)
-echo $TempFile
+
+echo $bytes << $TempFile
