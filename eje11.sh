@@ -10,14 +10,14 @@ bytes=$(cat /sys/class/net/enp2s0/statistics/rx_bytes)
 
 #touch --directory /tmp/datos --name rx_bytes
 #mktemp --directory /tmp/datos \--name rx_bytes 
-TempFile=$(mktemp -p /tmp/datos --suffix .manu)
+#TempFile=$(mktemp -p /tmp/datos --suffix .manu)
+OUTPUT_FILE="/tmp/datos"
+#echo $bytes >> $TempFile
+#echo $TempFile
 
-echo $bytes >> $TempFile
-echo $TempFile
-
-while true; datos
+while true; do
 bytes=$(cat /sys/class/net/enp2s0/statistics/rx_bytes)
 CURRENT_TIME=$(date +"%Y-%m-%d %H:%M:%S")
-echo "$CURRENT_TIME $bytes" >> $TempFile
+echo "$CURRENT_TIME $bytes" >> $OUTPUT_FILE
 sleep 1
 done
