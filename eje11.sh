@@ -17,7 +17,7 @@ OUTPUT_FILE="/tmp/datos"
 
 while true; do
 bytes=$(cat /sys/class/net/enp2s0/statistics/rx_bytes)
-CURRENT_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+CURRENT_TIME=$(date +"%H:%M:%S")
 echo "$CURRENT_TIME $bytes" >> $OUTPUT_FILE
 sleep 1
 done

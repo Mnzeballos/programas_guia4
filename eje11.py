@@ -1,4 +1,4 @@
-#!/usr/bin/python3.10
+#!/usr/bin/python3.12
 import matplotlib.pyplot as plt
 fuente=open("/tmp/datos","r")
 x=[]
