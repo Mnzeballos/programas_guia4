@@ -15,8 +15,9 @@ TempFile=$(mktemp -p /tmp/datos --suffix .manu)
 echo $bytes >> $TempFile
 echo $TempFile
 
-
-for
-do
-echo $bytes >> $TempFile
+while true; datos
+bytes=$(cat /sys/class/net/enp2s0/statistics/rx_bytes)
+CURRENT_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+echo "$CURRENT_TIME $bytes" >> $TempFile
+sleep 1
 done
